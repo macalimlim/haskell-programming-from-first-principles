@@ -1,0 +1,9 @@
+.stack-work/
+haskell-programming-from-first-principles.cabal
+*~
+TAGS
+dist-newstyle/
+*.tix
+src/*.hi
+src/*.o
+src/.#*

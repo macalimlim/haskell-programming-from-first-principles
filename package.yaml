@@ -1,0 +1,66 @@
+name:                haskell-programming-from-first-principles
+version:             0.1.0.0
+github:              "macalimlim/haskell-programming-from-first-principles"
+license:             BSD3
+author:              "Michael Angelo Calimlim"
+maintainer:          "macalimlim@gmail.com"
+copyright:           "2019 Michael Angelo Calimlim"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/macalimlim/haskell-programming-from-first-principles#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- QuickCheck
+- checkers
+- containers
+- criterion
+- ghc-prim
+- hspec
+- integer-gmp
+- parsers
+- random
+- raw-strings-qq
+- scotty
+- semigroups
+- split
+- text
+- time
+- transformers
+- trifecta
+- vector
+
+library:
+  source-dirs: src
+
+executables:
+  haskell-programming-from-first-principles-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - haskell-programming-from-first-principles
+
+tests:
+  haskell-programming-from-first-principles-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - haskell-programming-from-first-principles
